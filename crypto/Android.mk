@@ -500,7 +500,7 @@ ifeq ($(TARGET_SIMULATOR),true)
     LOCAL_LDLIBS += -ldl
 endif
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE:= libcrypto
+LOCAL_MODULE:= libcrypto-ndk
 include $(BUILD_SHARED_LIBRARY)
 
 #######################################
@@ -514,7 +514,7 @@ ifeq ($(WITH_HOST_DALVIK),true)
     LOCAL_SRC_FILES += $(non_arm_src_files)
     LOCAL_LDLIBS += -ldl
     LOCAL_MODULE_TAGS := optional
-    LOCAL_MODULE:= libcrypto
+    LOCAL_MODULE:= libcrypto-ndk
     include $(BUILD_SHARED_LIBRARY)
 endif
 
@@ -529,5 +529,5 @@ LOCAL_C_INCLUDES += $(local_c_includes)
 LOCAL_SRC_FILES += $(non_arm_src_files)
 LOCAL_LDLIBS += -ldl
 LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE:= libcrypto_static
+LOCAL_MODULE:= libcrypto-ndk_static
 include $(BUILD_STATIC_LIBRARY)

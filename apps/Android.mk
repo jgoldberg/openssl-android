@@ -56,8 +56,8 @@ LOCAL_SRC_FILES:= \
 #   cms.c ec.c s_server.c
 
 LOCAL_SHARED_LIBRARIES := \
-	libssl \
-	libcrypto 
+	libssl-ndk \
+	libcrypto-ndk 
 
 LOCAL_C_INCLUDES := \
 	$(NDK_PROJECT_PATH) \
@@ -72,7 +72,7 @@ include $(LOCAL_PATH)/../android-config.mk
 LOCAL_CFLAGS += -DOPENSSL_NO_DTLS1
 
 
-LOCAL_MODULE:= openssl
+LOCAL_MODULE:= openssl-ndk
 
 LOCAL_MODULE_TAGS := tests
 
